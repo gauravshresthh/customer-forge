@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button, Card, ConfigProvider, theme } from 'antd';
 
 import './globalStyles.css';
+import { colors } from './theme/colors';
 
 const App = () => {
 	const [isDarkMode, setIsDarkMode] = useState(false);
@@ -13,7 +14,7 @@ const App = () => {
 		<ConfigProvider
 			theme={{
 				token: {
-					// colorPrimary: colors.primary,
+					colorPrimary: colors.primary,
 				},
 				algorithm: isDarkMode ? darkAlgorithm : defaultAlgorithm,
 			}}>
